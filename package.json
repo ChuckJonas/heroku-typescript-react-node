@@ -7,9 +7,8 @@
   },
   "scripts": {
     "start": "node ./build/index.js",
-    "dev-server": "nodemon ./server.js localhost 8080",
-    "dev-client": "webpack-dev-server --port 3000",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
+    "dev-client": "cd react-app && npm start",
+    "dev-server": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
     "heroku-postbuild": "tsc & cd react-app/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
@@ -32,6 +31,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "nodemon": "^1.17.4",
     "ts-node": "^6.0.3",
     "typescript": "^2.8.1"
   }
