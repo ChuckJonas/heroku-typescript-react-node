@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Priority serve any static files.
-// app.use(express.static(path.resolve(__dirname, '../react-app/dist')));
+app.use(express.static(path.resolve(__dirname, '../react-app/dist')));
 
 // Answer API requests.
 app.get('/api/items', function (req, res) {
