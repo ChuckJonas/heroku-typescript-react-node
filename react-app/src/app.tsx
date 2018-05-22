@@ -1,6 +1,6 @@
 import { Card } from 'antd';
-import * as React from 'react';
 import { hot } from 'react-hot-loader';
+import * as React from 'react';
 
 class App extends React.Component<{}, {}> {
 
@@ -10,8 +10,8 @@ class App extends React.Component<{}, {}> {
 
   public render() {
     return (
-      <Card title='B.A.S.S. Blank!'>
-          For a more interesting example, check out the redux-example or react-example branches!
+      <Card title='Doctor Finder'>
+
       </Card>
     );
   }

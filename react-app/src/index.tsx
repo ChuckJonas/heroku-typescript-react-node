@@ -7,4 +7,12 @@ import App from './app';
 // tslint:disable-next-line:no-var-requires
 require('@src/styles/styles.less');
 
+fetch('/api/items').then((response) => {
+    return response.text();
+}).then((data) => {
+    console.log(data);
+}).catch((e) => {
+    console.log(e);
+});
+
 ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
