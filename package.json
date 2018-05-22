@@ -9,6 +9,7 @@
     "start": "node ./build/index.js",
     "dev-client": "cd react-app && npm start",
     "dev-server": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
+    "test": "cd react-app && npm test",
     "heroku-postbuild": "tsc & cd react-app/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
