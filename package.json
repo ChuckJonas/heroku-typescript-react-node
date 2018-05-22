@@ -6,11 +6,11 @@
     "node": "8.9.x"
   },
   "scripts": {
-    "start": "tsc & node ./build/index.js",
+    "start": "node ./build/index.js",
     "dev-server": "nodemon ./server.js localhost 8080",
     "dev-client": "webpack-dev-server --port 3000",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
-    "heroku-postbuild": "cd react-app/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "tsc & cd react-app/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
