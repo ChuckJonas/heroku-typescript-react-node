@@ -176,6 +176,7 @@ module.exports = (env = {}) => {
                 new webpack.DefinePlugin(GLOBAL_DEFINES),
                 new HtmlWebpackPlugin({
                     template: './index.html',
+                    inject: false,
                 }),
             ] : []),
         ]
