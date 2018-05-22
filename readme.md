@@ -14,8 +14,8 @@ Setup similar to [heroku-cra-node](https://github.com/mars/heroku-cra-node) but 
 
 ## Deploy to heroku
 
-1. heroku create
-1. git push heroku master
+1. `heroku create`
+1. `git push heroku master`
 
 Note: Uses the `heroku-postbuild` script to build the react app upon deployment.
 
