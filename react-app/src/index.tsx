@@ -7,6 +7,7 @@ import App from './app';
 // tslint:disable-next-line:no-var-requires
 require('@src/styles/styles.less');
 
+// test API
 fetch('/api/items').then((response) => {
     return response.text();
 }).then((data) => {
