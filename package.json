@@ -1,0 +1,37 @@
+{
+  "name": "rs-doctor-finder",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "8.9.x"
+  },
+  "scripts": {
+    "start": "tsc & node ./build/index.js",
+    "dev-server": "nodemon ./server.js localhost 8080",
+    "dev-client": "webpack-dev-server --port 3000",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
+    "heroku-postbuild": "cd react-app/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-app/node_modules"
+  ],
+  "dependencies": {
+    "@types/node": "^10.1.2",
+    "express": "^4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mars/heroku-cra-node.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^6.0.3"
+  }
+}
